@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Procurando nacionalidade</h1>
+    País: <input type="text" name="nac" id="nac">
+    <input type="button" value="verificar" onclick="Verificar()">
+    <div id="res"></div>
+
+    <script>
+        function Verificar() {
+            var nacio = document.getElementById('nac')
+            var res = document.getElementById('res')
+            if (nacio.value.toUpperCase() == "ANGOLA") {
+                res.innerHTML = `O seu país é ${nacio.value}, seja bem vindo meu cassule lindo.`
+            }else {
+                res.innerHTML = `O seu país é ${nacio.value}, bem vindo.`
+            }
+        }
+        
+    </script>
+
+</body>
+</html>

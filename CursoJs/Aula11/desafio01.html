@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="num1" id="num1" placeholder="Digite uma senha">
+    <input type="button" value="verificar" onclick="Ver()">
+    <div id="res"></div>
+    <script>
+       function Ver() {
+        var num = document.getElementById('num1')
+        var res = document.getElementById("res")
+        var n = Number(num.value)
+
+        if (n == 1234) {
+            res.innerHTML = `Acesso permitido!`
+        } else {
+            res.innerHTML = `Senha incorreta.`     
+       }
+
+       }
+    </script>
+</body>
+</html>

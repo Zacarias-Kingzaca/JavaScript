@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        section {
+            background-color: white;
+            box-shadow: 1px 0px 30px 10px rgba(235, 235, 235, 0.342);
+            width: 100%;
+            height: 450px;
+            border-radius: 20px;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            border-radius:6px;
+            font-weight: bold;
+        }
+
+        #button {
+            background-color: white;
+            font-weight: bold;
+            transition: ease-out 0.3s;
+        }
+
+        #button:hover {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        #res {
+            font-weight: bold;
+            text-align: start;
+            padding-left: 80px;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+   <section>
+      <div>
+        <h1>Tabuada</h1>
+        <input type="number" name="numero" id="numero">
+        <input type="button" value="Mostra Tabuada" onclick="Ver()" id="button">
+        <div id="res"></div>
+      </div>
+   </section>
+   <script>
+        function Ver() {
+            var num = document.getElementById('numero')
+            var res = document.getElementById('res')
+            var botao = document.getElementById("button")
+            res.innerHTML = ""
+            for(var n = 1; n <= 12; n++) {
+                res.innerHTML += `${num.value} x ${n} = ${num.value * n} <br>`
+            }
+            
+        }
+   </script>
+</body>
+</html>

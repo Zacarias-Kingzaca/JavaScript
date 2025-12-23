@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas-Vindas</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #btn {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Olá</h1>
+    <p id="mensagem">
+        Clica no botão a baixo parareceber uma mensagem
+    </p>
+    <button id="btn" onclick="clicou()">Clica aqui</button>
+    <script>
+        function clicou() {
+           let ms = document.getElementById("mensagem")
+            ms.innerHTML = "Seja muito Bem-Vindo!"
+            ms.style.color = "blue"
+            ms.style.fontSize = "18px"
+            let bnt = document.getElementById("btn")
+            bnt.innerHTML = "Obrigado!"
+        }
+    </script>
+</body>
+</html>

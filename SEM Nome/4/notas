@@ -1,0 +1,55 @@
+*NAVEGAÇÃO NO DOM - LISTA DE PROPRIEDADES*
+
+
+
+*SUBINDO NA ÁRVORE*
+
+`parentElement` 
+
+Pega o elemento pai direto. Ignora texto e comentários.
+
+
+
+`closest('seletor')` 
+
+Sobe na árvore até achar o primeiro pai que bate com o seletor CSS. Se não achar, retorna null.
+
+
+
+*DESCENDO NA ÁRVORE*
+
+`children` 
+
+Pega todos os elementos filhos diretos. Só tags HTML. Ignora texto e espaço.
+
+
+
+`firstElementChild` 
+
+Pega o primeiro elemento filho. Só tag HTML.
+
+
+
+`lastElementChild` 
+
+Pega o último elemento filho. Só tag HTML.
+
+
+
+*ANDANDO PROS LADOS*
+
+`nextElementSibling` 
+
+Pega o próximo irmão que é um elemento HTML. Se não existir, retorna null.
+
+
+
+`previousElementSibling` 
+
+Pega o irmão anterior que é um elemento HTML. Se não existir, retorna null.
+
+
+
+*REGRA PRA NUNCA ESQUECER*
+
+Sempre testa com `if (elemento)` antes de usar. Se não existir, dá erro de `null`.

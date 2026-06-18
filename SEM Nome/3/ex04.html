@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex04</title>
+</head>
+<body>
+    <input type="text" id="tarefa" placeholder="Nova tarefa">
+    <button id="add">
+        Adicionar
+    </button>
+    <ul id="lista"></ul>
+
+    <script>
+        let nome =  document.getElementById("tarefa")
+        let add = document.getElementById("add")
+        let lista = document.getElementById("lista")
+
+        add.addEventListener("click", function(){
+            if(nome.value !== "") {
+                let listanome = document.createElement("li")
+                let del =  document.createElement("button")
+                del.textContent =  "X"
+                del.addEventListener("click", function() {
+                    listanome.remove()
+                })
+
+                listanome.textContent = nome.value
+                listanome.appendChild(del)
+                lista.appendChild(listanome)
+                nome.value = ""
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX02</title>
+</head>
+<body>
+    <h1 id="titulo">
+        Passa o mause aqui
+    </h1>
+    <button id="btn">
+        Cliques: 0
+    </button>
+    <input type="text" id="campo" placeholder="Digita e aperta Enter">
+    <p id="resultado"></p>
+
+    <script>
+        let titulo = document.getElementById("titulo")
+        titulo.addEventListener("mouseover", function(){
+            titulo.style.color = "Blue"
+
+            titulo.addEventListener("mouseout", function() {
+                titulo.style.color = "black"
+            })
+         
+        })
+        let contador = 0
+        let btn =  document.getElementById("btn")
+        btn.addEventListener("click",function(){ 
+            contador += 1
+            btn.textContent = "Cliques: "
+            btn.textContent += contador
+            
+        })
+
+        let campo = document.getElementById("campo")
+        let res = document.getElementById("resultado")
+        campo.addEventListener("keydown", function(event){
+            if (event.key === 'Enter') {
+                res.textContent = campo.value;
+                campo.value  = ""
+            }
+        })
+    </script>
+</body>
+</html>

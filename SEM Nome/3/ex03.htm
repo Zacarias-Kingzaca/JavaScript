@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= y , initial-scale=1.0">
+    <title>EX03</title>
+</head>
+<body>
+    <input type="text" id="nome" placeholder="Nome">
+    <button class="btnAdd">Add</button>
+    <ul id="listaNomes"></ul>
+
+    <script>
+        let btnAdd = document.querySelector(".btnAdd")
+        let inputName = document.querySelector("#nome")
+        let listaNomes =  document.querySelector("#listaNomes")
+        
+        btnAdd.addEventListener("click", function() {
+            if(inputName.value !== "") {
+                let novoItem = document.createElement("li")
+                novoItem.textContent = inputName.value
+                
+                let btnDel = document.createElement("button")
+                btnDel.textContent = "X"
+                btnDel.addEventListener("click", function(){
+                    novoItem.remove();
+                })
+
+                novoItem.appendChild(btnDel)
+                listaNomes.appendChild(novoItem)
+                listaNomes.style.margin = "10px"
+                inputName.value = ""
+
+            }
+        })
+    </script>
+</body>
+</html>

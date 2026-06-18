@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegando pelos elementos</title>
+</head>
+<body>
+    <div class="app">
+        <h1>Lista de tarefas</h1>
+        <ul id="lista">
+        <li>Estudar Dom</li>
+        <li id="ativo">Treinar Js</li>
+        <li>Dormir</li>
+        </ul>
+    </div>
+    <button id="btn">Marcar próximo</button>
+
+    <script>
+        let ativo = document.getElementById("ativo")
+        let irmaoSeguinte = ativo.nextElementSibling
+        if (irmaoSeguinte) {
+            irmaoSeguinte.style.fontWeight = "700"
+        }
+
+        let primeiro =  ativo.closest('.app')
+        if (primeiro) {
+            primeiro.style.backgroundColor = "#f0f0f0"
+        }
+
+        let h1 = primeiro.firstElementChild
+        h1.textContent =  "Missão Concluída"
+    </script>
+</body>
+</html>

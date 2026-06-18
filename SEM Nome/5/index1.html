@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos</title>
+</head>
+<body>
+    <input type="text" id="nome" placeholder="Digita seu nome">
+    <button id="Btn" disabled>Enviar</button>
+
+    <script>
+        let btn = document.getElementById("Btn")
+        let nome = document.querySelector("#nome")
+        nome.placeholder = "Zacarias Eduardo joão"
+        btn.disabled = false
+        btn.setAttribute("data-status", "pronto")
+    </script>
+</body>
+</html>

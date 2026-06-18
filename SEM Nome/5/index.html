@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos</title>
+    <style>
+        button {
+            background-color: aqua;
+            padding: 10px 13px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="meuBtn" class="azul">Clica aqui</button>
+    <img src="SEC1.2.jpg" alt="primeira foto" id="img" width="200px">
+    <script>
+        let btn = document.getElementById("meuBtn")
+        let img = document.querySelector("#img")
+
+        btn.addEventListener("click", function() {
+            img.src = "SEC1.3.jpg"
+            img.setAttribute("width", 300)
+        })
+        
+    </script>
+</body>
+</html>

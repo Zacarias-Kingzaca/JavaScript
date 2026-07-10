@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino de DOM</title>
+    <style>
+        .ativo {
+        background-color: lightgreen;
+    }
+
+    .erro {
+        border: 2px solid red;
+    }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Lista de Tarefas</h1>
+    <input type="text" id="novaTarefa" placeholder="Digite uma Tarefa">
+    <button id="btnAdd">Adicionar</button>
+    <button id="btnLimpar">Limpar</button>
+
+    <p>Total: <span id="contador" >0</span></p>
+
+    <ul id="lista">
+        <li class="item">JavaScript</li>
+        <li class="item">Treinar DOM</li>
+    </ul>
+
+    <script>
+        let tittulo = document.getElementById("titulo")
+        let ulLista = document.getElementById("lista")
+        let total = document.getElementById("contador")
+        let novoItem = document.getElementById("novaTarefa")
+        let item = document.querySelector(".item")
+        let btnadd = document.getElementById("btnAdd")
+
+        btnadd.addEventListener("click", function() {
+            if (novoItem.value == "") {
+                alert("Input Vazio")
+            }else {
+                let tarefa = document.createElement("li")
+                tarefa.textContent = novoItem.value
+                ulLista.appendChild(tarefa)
+                tarefa.addEventListener("click", function() {
+                this.remove()
+                })
+                novoItem.value = ""
+                total.textContent =   ulLista.children.length 
+            }
+        
+        })
+
+        total.textContent =   ulLista.children.length 
+        tittulo.textContent = "Minhas Tarefas Top"
+        ulLista.style.color = "blue"
+
+        document.querySelectorAll("#lista .item").forEach(function(li) {
+            li.addEventListener("click", function() {
+            this.remove()
+            })
+        })
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 400px;
+            margin: 30px auto;
+        }
+
+        input, button  {
+            padding: 8px;
+            margin: 5px 0px;
+        }
+
+        .feita  {
+            text-decoration: line-through;
+            color:  #888;
+        }
+
+        .escondida {
+            display: none;
+        }
+
+        li {
+            cursor: pointer;
+            margin: 8px 0px;
+        }
+    </style>
+    <title>LISTA DE TAREFAS</title>
+</head>
+<body>
+    <h2>Minha Lista de tarefas</h2>
+
+    <input type="text" id="inputTarefa" placeholder="Nova Trefa">
+    <button id="btnAdd">Adicionar</button>
+    <button id="Filtrar">Esconder Feitas</button>
+    <ul id="lidlistaTarefas"></ul>
+
+    <script>
+        let input = document.getElementById("inputTarefa")
+        let btn = document.getElementById("btnAdd")
+        let filtrar = document.getElementById("Filtrar")
+        let lista = document.getElementById("lidlistaTarefas")
+
+        btn.addEventListener("click", function() {
+            if (input.value !== "") {
+                let button = document.createElement('button')
+                button.textContent = "X"
+                let tarefa = document.createElement("li")
+                tarefa.textContent = input.value 
+                button.addEventListener("click", function(){
+                    tarefa.remove()
+                }
+            
+            )
+        
+        tarefa.addEventListener("click", function() {
+                    tarefa.classList.toggle('feita')
+                })
+
+        let escondidas = false;
+
+        filtrar.addEventListener('click', function() {
+            escondidas =! escondidas
+            let todasTarefas = document.querySelector('#lidlistaTarefas li')
+
+            todasTarefas.for
+        })
+
+
+                tarefa.appendChild(button)
+                lista.appendChild(tarefa)
+                input.value = ""
+                
+            }
+        })
+    </script>
+
+</body>
+</html>

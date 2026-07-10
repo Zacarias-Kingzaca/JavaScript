@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema</title>
+</head>
+<body>
+    <button id="tema">Trocar Tema</button>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        .dark {
+            background-color:  black;
+            color: white;
+        }
+    </style>
+
+    <script>
+        const temaBtn = document.getElementById('tema')
+
+    temaBtn.addEventListener("click", function() {
+        temaBtn.classList.toggle("dark")
+    })
+
+    </script>
+</body>
+</html>

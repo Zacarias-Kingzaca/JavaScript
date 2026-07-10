@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassList</title>
+</head>
+<body>
+    <button id="abrir">Abrir Menu</button>
+    <button id="fechar">Fechar Menu</button>
+    <nav id="menu" class="escondido">Menu aqui</nav>
+
+    <style>
+        .escondido {
+            display: none;
+        }
+
+        nav {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+
+    <script>
+        let abrir = document.getElementById("abrir")
+        let fechar = document.getElementById("fechar")
+        let menu = document.getElementById("menu")
+
+        abrir.addEventListener("click", function() {
+            menu.classList.remove("escondido")
+        })
+
+        
+        fechar.addEventListener("click", function() {
+            menu.classList.add("escondido")
+            escondido.style.display = "block"
+        })
+    </script>
+
+</body>
+</html>

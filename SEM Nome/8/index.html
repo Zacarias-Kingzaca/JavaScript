@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAI DAR CERTO</title>
+    <Style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+         body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: black;
+            padding: 20px;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #loja {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+            max-width: 1200px;
+            margin: 0  auto;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 12px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+        }
+
+        .card p {
+            margin: 5px 0;
+            font-weight: bold;
+            color: #2c7a2c;
+            font-size: 20px;
+        }
+
+        .card button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+        }
+
+        .card button:hover {
+            background-color: #1d1d1d;
+        }
+
+
+    </Style>
+</head>
+<body>
+    <header>
+        <h1>LOJA CARVANI</h1>
+    </header>
+    <div id="loja"></div>
+    <script src="script.js"></script>
+</body>
+</html>

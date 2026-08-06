@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de fotos</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        
+        #galeria {
+            background-color: white;
+            width: 95%;
+            min-height: 600px;
+            margin: 30px;
+            border-radius: 9px;
+            display: flex;
+            flex-wrap:wrap ;
+        }
+    </style>
+</head>
+<body>
+    <div id="galeria">
+
+    </div>
+
+    <script>
+        let galeria =  document.getElementById("galeria")
+        let container = document.createElement("div")
+        let fotos = [
+            "SEC1.2.jpg",
+            "SEC1.3.jpg",
+            "SEC3.2.jpg",
+            "SEC3.1.jpg",
+            "SEC2.1.jpg"
+        ]
+        for (let i = 0; i < fotos.length; i++) {
+            let img = document.createElement("img")
+            img.src = fotos[i]
+            img.style.width = "220px"
+            img.style.height = "250px"
+            img.style.margin = "15px"
+            galeria.appendChild(img)
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de 10 quadros</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        const container = document.querySelector("#container")
+        for(let i = 1; i <= 10; i++) {
+            const quadrado = document.createElement('div')
+
+            quadrado.textContent = i
+            quadrado.style.width = "50px"
+            quadrado.style.height = "50px"
+            quadrado.style.background = "green"
+            quadrado.style.color = "white"
+            quadrado.style.margin = "15px"
+            quadrado.style.display = "inline-block"
+            quadrado.style.textAlign = "center"
+            
+            if (quadrado.textContent == "2" || quadrado.textContent == "4" || quadrado.textContent == "6" || quadrado.textContent == "8" || quadrado.textContent == "10"  ) {    
+                 quadrado.style.background = "black"
+            }
+
+            container.appendChild(quadrado)
+        }
+    </script>
+</body>
+</html>

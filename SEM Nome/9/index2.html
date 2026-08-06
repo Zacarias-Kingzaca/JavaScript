@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+</head>
+<body>
+
+    <div id="espaco">
+
+    </div>
+
+    <script>
+        let produtos = ["Telemóvel", "Auscutador", "PC", "Tablet"]
+        let lista = document.createElement("ul")
+        let espaco = document.getElementById("espaco")
+ 
+        for (let i = 0; i < produtos.length; i++ ) {
+            let elemento = document.createElement("li")
+            elemento.textContent = produtos[i]
+            lista.appendChild(elemento)
+        }
+        espaco.appendChild(lista)
+        
+    </script>
+</body>
+</html>
